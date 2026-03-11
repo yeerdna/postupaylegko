@@ -1,0 +1,93 @@
+.title {
+  text-align: left;
+  padding-left: 20px;
+  font-family: Snell Roundhand;
+  color: #1a3266;
+}
+.custom-toolbar {
+  --padding-start: 0;
+  --padding-end: 0;
+}
+ion-toolbar {
+  --border-width: 0;
+  --border-color: transparent;
+}
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 0px;
+  margin-top: 20px;
+}
+.hero-image {
+  width: 128px;
+  height: auto;
+  margin-left: 15px;
+}
+.hero-text {
+  flex: 1;
+  margin-right: 20px;
+}
+.hero-text h1 {
+  font-size: 32px;
+  margin: 0 0 10px 0;
+  color: #1a3266;
+  font-weight: 900;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+.cards-wrapper {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-bottom: 100px;
+}
+
+/* Простая карточка */
+.simple-card {
+  background: white;
+  border-radius: 20px;
+  padding: 7px 9px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  text-align: center;
+}
+
+/* Стили для accordion */
+ion-accordion {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+/* Убираем стандартные линии */
+ion-item {
+  --background: white;
+}
+
+/* Контент внутри */
+.accordion-content {
+  background: white;
+  padding: 10px 20px 20px 20px;
+}
+
+.accordion-content ul {
+  margin: 0;
+  padding-left: 18px;
+}
+.simple-card p {
+  font-size: 14px;
+  color: #1a3266;
+}
+ion-accordion-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+ion-accordion ion-label {
+  color: #1a3266 !important;
+  font-weight: 600;
+}
+li {
+  font-weight: 300;
+}

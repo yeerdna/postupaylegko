@@ -1,0 +1,24 @@
+/* For information on how to create your own theme, please refer to:
+http://ionicframework.com/docs/theming/ */
+:root {
+  color-scheme: light;
+
+  --ion-background-color: #ffff;
+  --ion-text-color: #1f1f1f;
+
+  --ion-color-primary: #3b82f6;
+}
+body,
+html,
+#root {
+  background-color: #ffffff;
+}
+body {
+  background-image: url("/assets/icons/719cdfbf78cb41cf9e6a4646c03d5203ceedb5fa copy.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+ion-content {
+  --background: transparent;
+}

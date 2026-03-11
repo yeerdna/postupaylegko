@@ -1,0 +1,126 @@
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 0px;
+  margin-top: 35px;
+}
+.hero-image {
+  width: 128px;
+  height: auto;
+  margin-left: 15px;
+}
+
+.hero-text {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.hero-text h1 {
+  font-size: 32px;
+  margin: 0 0 10px 0;
+  color: #1a3266;
+  font-weight: 900;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+.hero-desc {
+  font-style: italic;
+  font-weight: 400;
+  max-width: 340px;
+  text-align: left;
+  margin: auto;
+  padding-top: 20px;
+}
+.hero-desc b {
+  color: #1a3266;
+}
+.slider-wrapper {
+  position: relative;
+  margin-top: 40px;
+}
+
+.slide {
+  padding: 15px 15px;
+  background: white;
+  border-radius: 20px;
+}
+.slide-cont {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.slide-text {
+  flex: 1;
+}
+.slider-cont {
+  max-width: 340px;
+  margin: 0 auto;
+  position: relative;
+}
+.nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 49px;
+  height: 30px;
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  border: 1px solid rgba(255, 255, 255, 0.6);
+
+  color: #1a3266;
+  font-size: 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  z-index: 10;
+
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.nav-button.left {
+  left: 6px;
+}
+
+.nav-button.right {
+  right: 6px;
+}
+.slide p {
+  font-size: 13px;
+}
+.slide b {
+  color: #1a3266;
+}
+.slide h2 {
+  font-size: 24px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  color: #1a3266;
+}
+.msw {
+  padding-bottom: 100px;
+}
+.secslide {
+  font-size: 16px !important;
+}
+.lasttxt {
+  padding-bottom: 100px;
+  padding-top: 20px;
+  max-width: 340px;
+  text-align: left;
+  margin: auto;
+  font-style: italic;
+  font-size: 15px;
+  color: #1a3266;
+}
+.lasttxt b {
+  font-size: 20px;
+}

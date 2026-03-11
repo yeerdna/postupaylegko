@@ -1,0 +1,78 @@
+/* Панель */
+.custom-tab-panel {
+  position: fixed;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 90%;
+  max-width: 600px;
+  height: 64px;
+
+  background: #ffffff;
+  border-radius: 32px;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  z-index: 100;
+}
+
+/* Кнопки */
+.tab-button {
+  flex: 1;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 12px;
+  color: #afd2ee;
+  cursor: pointer;
+
+  transition:
+    transform 0.5s ease,
+    color 0.5s ease;
+}
+
+/* Иконки */
+.tab-button ion-icon {
+  font-size: 20px;
+  margin-bottom: 2px;
+  transition: transform 0.5s ease;
+}
+
+/* Активная */
+.tab-button.active {
+  color: #4283b8;
+}
+
+.tab-button.active ion-icon,
+.tab-button.active span {
+  transform: scale(1.15);
+}
+
+/* Нажатие */
+.tab-button:active {
+  transform: scale(0.9);
+}
+
+/* Desktop */
+@media (min-width: 900px) {
+  .custom-tab-panel {
+    max-width: 640px;
+    height: 72px;
+  }
+
+  .tab-button {
+    font-size: 14px;
+  }
+
+  .tab-button ion-icon {
+    font-size: 24px;
+  }
+}

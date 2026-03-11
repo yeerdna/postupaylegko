@@ -1,0 +1,74 @@
+.link .hero-wrap {
+  padding: 20px;
+}
+
+.link .hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0px;
+}
+
+.link .hero-text {
+  flex: 1;
+}
+
+.link .hero-text h1 {
+  font-size: 48px;
+  margin: 0;
+  color: #1a3266;
+  font-weight: 900;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  line-height: 1.2;
+}
+
+.link .hero-image {
+  width: 128px;
+  flex-shrink: 0;
+  margin-left: 0px;
+}
+.dept-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: white;
+  border-radius: 20px;
+  padding: 15px;
+  margin: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  margin-bottom: 100px;
+}
+
+.dept-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 20px;
+  text-decoration: none;
+  color: #333;
+  position: relative;
+}
+
+.dept-icon {
+  width: 32px;
+  height: 32px;
+  margin-right: 16px;
+}
+
+.dept-label {
+  font-size: 18px;
+  flex: 1;
+}
+.dept-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+  right: 20px;
+  height: 1px;
+  background-color: #e0e0e0;
+}
+.dept-arrow {
+  font-size: 22px;
+  color: #999;
+}
