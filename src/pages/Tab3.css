@@ -15,57 +15,49 @@ ion-toolbar {
 .faq-container {
   padding: 20px;
 }
-
-/* Заголовок */
 .faq-title {
   margin: 0 0 16px 0;
 }
-
-/* Поиск */
 .faq-search {
   width: 100%;
   padding: 12px 16px;
   border-radius: 14px;
-  border: none;
-  background: white;
   margin-bottom: 16px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   outline: none;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
-
-/* Главная карточка */
 .faq-card {
-  background: white;
   border-radius: 20px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
   overflow: hidden;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
-
-/* Внутренний скролл */
 .faq-scroll {
   max-height: 280px;
   overflow-y: auto;
 }
-
-/* Голубой скроллбар */
 .faq-scroll::-webkit-scrollbar {
   width: 6px;
 }
-
 .faq-scroll::-webkit-scrollbar-thumb {
   background: #4da6ff;
   border-radius: 10px;
 }
-
-/* Вопрос */
 .faq-item {
   border-bottom: 1px solid #e5e5e5;
 }
-
 .faq-item:last-child {
   border-bottom: none;
 }
-
 .faq-question {
   padding: 16px;
   display: flex;
@@ -74,17 +66,12 @@ ion-toolbar {
   cursor: pointer;
   font-weight: 500;
 }
-
-/* Стрелка */
 .arrow {
   transition: transform 0.3s ease;
 }
-
 .arrow.open {
   transform: rotate(180deg);
 }
-
-/* Ответ */
 .faq-answer {
   max-height: 0;
   overflow: hidden;
@@ -93,7 +80,6 @@ ion-toolbar {
   color: #555;
   transition: all 0.3s ease;
 }
-
 .faq-answer.show {
   max-height: 200px;
   padding: 0 16px 16px 16px;
@@ -103,4 +89,54 @@ ion-toolbar {
 }
 .faq-question {
   color: #1a3266;
+}
+@media (min-width: 900px) {
+  .hero-text h1 {
+    max-width: 600px;
+  }
+  .faq-search {
+    width: 700px;
+    padding: 0 18px;
+    margin-left: 400px;
+    height: 60px;
+    align-self: flex-start;
+    margin-bottom: 20px;
+    font-size: 19px;
+    border-radius: 20px;
+  }
+  .faq-search:focus {
+    border: 1px solid rgba(26, 50, 102, 0.4);
+    box-shadow: 0 0 0 2px rgba(26, 50, 102, 0.1);
+  }
+  .faq-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .faq-card {
+    width: 1460px;
+    height: 420px;
+    border-radius: 20px;
+    margin-top: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .faq-scroll {
+    max-height: none;
+    height: 100%;
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    padding: 5px 0;
+  }
+  .faq-item {
+    flex-shrink: 0;
+  }
+  .faq-question {
+    font-size: 20px;
+    padding: 20px 24px;
+  }
+  .faq-answer.show {
+    padding: 0 24px 20px 24px;
+  }
 }

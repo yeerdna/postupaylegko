@@ -2,7 +2,6 @@ import { IonIcon, useIonRouter } from "@ionic/react";
 import { useLocation } from "react-router-dom";
 import React from "react";
 import "../theme/tabbar.css";
-
 const CustomTabBar: React.FC = () => {
   const location = useLocation();
   const router = useIonRouter();
@@ -16,7 +15,6 @@ const CustomTabBar: React.FC = () => {
     },
     { href: "/tab4", icon: "/assets/icons/ListNested.svg", label: "Ссылки" },
   ];
-
   return (
     <div className="custom-tab-panel">
       {tabs.map((tab) => (

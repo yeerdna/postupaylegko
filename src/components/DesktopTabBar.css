@@ -1,0 +1,118 @@
+:root {
+  --main-blue: #1a3266;
+}
+.desktop-tabbar {
+  display: none;
+}
+
+.mobile-only {
+  display: block;
+}
+
+.desktop-only {
+  display: none;
+}
+
+@media (min-width: 900px) {
+  .mobile-only {
+    display: none;
+  }
+
+  .desktop-only {
+    display: block;
+  }
+  .desktop-tabbar {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 56px;
+    right: 0;
+    width: 300px;
+    background: var(--main-blue);
+    border-radius: 0 0 0 30px;
+    overflow: hidden;
+    z-index: 200;
+    box-shadow:
+      0 10px 30px rgba(16, 31, 63, 0.18),
+      inset 0 1px 0 rgba(255, 255, 255, 0.04);
+    border-top: none;
+  }
+  .desktop-tab {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-height: 58px;
+    padding: 0 24px;
+    color: rgba(255, 255, 255, 0.86);
+    cursor: pointer;
+    position: relative;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition:
+      background 0.22s ease,
+      color 0.22s ease,
+      transform 0.22s ease,
+      padding-left 0.22s ease;
+  }
+
+  .desktop-tab:last-child {
+    border-bottom: none;
+  }
+  .desktop-tab:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: white;
+    padding-left: 28px;
+  }
+  .desktop-tab.active {
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.22),
+      rgba(255, 255, 255, 0.08)
+    );
+    color: white;
+    padding-left: 30px;
+  }
+  .desktop-tab.active::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 10px;
+    bottom: 10px;
+    width: 5px;
+    border-radius: 0 10px 10px 0;
+    background: white;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.35);
+  }
+  .desktop-tab.active::after {
+    content: "";
+    position: absolute;
+    inset: 6px 8px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.04);
+    z-index: 0;
+  }
+  .desktop-tab-icon {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+    position: relative;
+    z-index: 1;
+    transition:
+      transform 0.22s ease,
+      opacity 0.22s ease;
+  }
+  .desktop-tab-label {
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 1.2;
+    position: relative;
+    z-index: 1;
+    letter-spacing: 0.1px;
+  }
+
+  .desktop-tab:hover .desktop-tab-icon,
+  .desktop-tab.active .desktop-tab-icon {
+    transform: scale(1.08);
+  }
+}

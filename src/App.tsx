@@ -7,36 +7,20 @@ import Tab3 from "./pages/Tab3";
 import Tab4 from "./pages/Tab4";
 import { useState, useEffect } from "react";
 import SplashScreen from "./components/SplashScreen";
-/* Core CSS required for Ionic components to work properly */
 import "@ionic/react/css/core.css";
-
-/* Basic CSS for apps built with Ionic */
 import "@ionic/react/css/normalize.css";
 import "@ionic/react/css/structure.css";
 import "@ionic/react/css/typography.css";
-
-/* Optional CSS utils that can be commented out */
 import "@ionic/react/css/padding.css";
 import "@ionic/react/css/float-elements.css";
 import "@ionic/react/css/text-alignment.css";
 import "@ionic/react/css/text-transformation.css";
 import "@ionic/react/css/flex-utils.css";
 import "@ionic/react/css/display.css";
-
-/**
- * Ionic Dark Mode
- * -----------------------------------------------------
- * For more info, please see:
- * https://ionicframework.com/docs/theming/dark-mode
- */
-
-/* import '@ionic/react/css/palettes/dark.always.css'; */
-/* import '@ionic/react/css/palettes/dark.class.css'; */
-
-/* Theme variables */
 import "./theme/variables.css";
 import "./theme/tabbar.css";
 import CustomTabBar from "./components/CustomTabBar";
+import DesktopTabBar from "./components/DesktopTabBar";
 
 setupIonicReact();
 
@@ -46,11 +30,11 @@ const App: React.FC = () => {
 
   useEffect(() => {
     const timer1 = setTimeout(() => {
-      setHideSplash(true); // запускаем fade
+      setHideSplash(true);
     }, 2000);
 
     const timer2 = setTimeout(() => {
-      setLoading(false); // убираем splash
+      setLoading(false);
     }, 2600);
 
     return () => {
@@ -71,8 +55,12 @@ const App: React.FC = () => {
           <Route path="/tab4" component={Tab4} exact />
           <Route exact path="/" render={() => <Redirect to="/tab1" />} />
         </IonRouterOutlet>
-
-        <CustomTabBar />
+        <div className="mobile-only">
+          <CustomTabBar />
+        </div>
+        <div className="desktop-only">
+          <DesktopTabBar />
+        </div>
       </IonReactRouter>
     </IonApp>
   );

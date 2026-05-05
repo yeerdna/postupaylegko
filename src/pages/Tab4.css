@@ -6,7 +6,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 0px;
+  margin-top: 0;
+  gap: 0;
 }
 
 .link .hero-text {
@@ -25,24 +26,55 @@
 .link .hero-image {
   width: 128px;
   flex-shrink: 0;
-  margin-left: 0px;
+  margin-left: 0;
 }
+
+/* карточка */
 .dept-card {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  background: white;
-  border-radius: 20px;
-  padding: 15px;
+
   margin: 20px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  margin-top: 7px;
   margin-bottom: 100px;
+
+  padding: 0;
+
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+
+  overflow: hidden;
 }
 
+/* один раздел */
+.dept-item-wrap {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* линия между разделами */
+.dept-item-wrap:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: 0;
+  height: 1px;
+  background: #e0e0e0;
+}
+
+/* строка раздела */
 .dept-item {
   display: flex;
   align-items: center;
   gap: 14px;
+
   padding: 18px 20px;
   text-decoration: none;
   color: #333;
@@ -53,22 +85,119 @@
   width: 32px;
   height: 32px;
   margin-right: 16px;
+  flex-shrink: 0;
 }
 
 .dept-label {
   font-size: 18px;
   flex: 1;
 }
-.dept-item:not(:last-child)::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 20px;
-  right: 20px;
-  height: 1px;
-  background-color: #e0e0e0;
-}
+
 .dept-arrow {
   font-size: 22px;
   color: #999;
+  transition: transform 0.3s ease;
+}
+
+.dept-arrow.open {
+  transform: rotate(90deg);
+}
+
+/* выпадающие ссылки */
+.dept-links {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  transition:
+    max-height 0.3s ease,
+    padding 0.3s ease;
+}
+
+.dept-links.show {
+  max-height: 420px;
+  padding: 10px 20px 16px;
+  overflow-y: auto;
+}
+
+.dept-link {
+  display: block;
+  color: #1a3266;
+  text-decoration: none;
+  margin-bottom: 8px;
+}
+
+.dept-link:hover {
+  text-decoration: underline;
+}
+
+/* десктоп */
+@media (min-width: 900px) {
+  .link .hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start !important;
+    gap: 40px;
+  }
+
+  .link .hero-text {
+    flex: 0 0 auto !important;
+    margin-right: 0 !important;
+    max-width: none !important;
+  }
+
+  .link .hero-image {
+    margin-left: 0 !important;
+    width: 140px;
+    flex-shrink: 0;
+  }
+
+  .link .hero-text h1 {
+    margin: 0;
+  }
+
+  .dept-card {
+    width: 1200px;
+    height: auto;
+    min-height: 500px;
+    margin-left: 150px;
+    margin-top: 30px;
+    margin-bottom: 0;
+
+    border-radius: 20px;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  .dept-item-wrap {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .dept-item {
+    flex: 1;
+    padding: 20px 24px;
+    font-size: 20px;
+    gap: 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .dept-label {
+    font-size: 25px;
+  }
+
+  .dept-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .dept-links.show {
+    max-height: 320px;
+    overflow-y: auto;
+  }
 }
