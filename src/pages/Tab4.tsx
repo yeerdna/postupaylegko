@@ -12,50 +12,107 @@ const departments = [
     icon: "/assets/icons/book.svg",
     label: "Экзамены",
     links: [
-      { title: "Банк заданий ЕГЭ", url: "https://fipi.ru/ege" },
-      { title: "Результаты ЕГЭ", url: "https://checkege.rustest.ru/" },
+      {
+        title: "ФИПИ",
+        url: "https://fipi.ru",
+      },
+      {
+        title: "Результаты ЕГЭ",
+        url: "https://checkege.rustest.ru",
+      },
+      {
+        title: "Навигатор подготовки к ЕГЭ",
+        url: "https://fipi.ru/navigator-podgotovki",
+      },
+      {
+        title: "Расписание ЕГЭ",
+        url: "https://obrnadzor.gov.ru",
+      },
     ],
   },
+
   {
     icon: "/assets/icons/document-text.svg",
     label: "Приёмные комиссии",
     links: [
       {
-        title: "Госуслуги (поступление)",
-        url: "https://www.gosuslugi.ru/help/faq/university/2619",
+        title: "Госуслуги — Поступление в вуз онлайн",
+        url: "https://www.gosuslugi.ru/vuzonline",
       },
-      { title: "Вузы России", url: "https://vuzopedia.ru/vuz" },
+      {
+        title: "Единая приёмная комиссия",
+        url: "https://epkrf.ru",
+      },
+      {
+        title: "СПбГУ — Приёмная комиссия",
+        url: "https://abiturient.spbu.ru",
+      },
+      {
+        title: "ПНИПУ — Абитуриенту",
+        url: "https://pstu.ru/abitur",
+      },
+      {
+        title: "ИТМО — Поступление",
+        url: "https://abit.itmo.ru",
+      },
     ],
   },
+
   {
     icon: "/assets/icons/cash.svg",
     label: "Льготы",
     links: [
       {
         title: "Льготы при поступлении",
-        url: "https://postupi.online/journal/postuplenie-v-vuz/lgoti-pri-postuplenii-kakie-bivaut-i-kak-imi-vospolzovatsya/",
+        url: "https://www.gosuslugi.ru/help/faq/university",
+      },
+      {
+        title: "Поступление БВИ",
+        url: "https://postupi.online",
+      },
+      {
+        title: "Олимпиады школьников",
+        url: "https://rsr-olymp.ru",
+      },
+      {
+        title: "Целевое обучение",
+        url: "https://trudvsem.ru/information-pages/target-education",
       },
     ],
   },
+
   {
     icon: "/assets/icons/business.svg",
-    label: "Вузы и ресурсы",
+    label: "Общежития и ресурсы",
     links: [
-      { title: "Вузы России", url: "https://vuzopedia.ru/vuz" },
       {
-        title: "Вузы Санкт-Петербурга",
-        url: "https://tabiturient.ru/city/spb/",
+        title: "СПбГУ — Общежития",
+        url: "https://spbu.ru",
       },
-      { title: "Вузы (Пермь)", url: "https://perm.postupi.online/vuzi/" },
-
-      { title: "Высшая школа экономики", url: "https://ba.hse.ru/" },
-      { title: "МГТУ им. Баумана", url: "https://bmstu.ru/" },
-      { title: "МИФИ", url: "https://mephi.ru/" },
-      { title: "ИТМО", url: "https://itmo.ru/" },
-      { title: "СПбПУ", url: "https://www.spbstu.ru/" },
-      { title: "ЛЭТИ", url: "https://etu.ru/" },
-      { title: "УрФУ", url: "https://urfu.ru/ru/" },
-      { title: "УГНТУ", url: "https://ugntu2025.ru/" },
+      {
+        title: "СПбПУ — Кампус",
+        url: "https://spbstu.ru",
+      },
+      {
+        title: "ИТМО — Студенческие общежития",
+        url: "https://itmo.ru",
+      },
+      {
+        title: "ПГНИУ — Общежития",
+        url: "https://www.psu.ru",
+      },
+      {
+        title: "ПНИПУ — Студгородок",
+        url: "https://pstu.ru",
+      },
+      {
+        title: "Навигатор вузов",
+        url: "https://tabiturient.ru",
+      },
+      {
+        title: "Поступи Онлайн",
+        url: "https://postupi.online",
+      },
     ],
   },
 ];
